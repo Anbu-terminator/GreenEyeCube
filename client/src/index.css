@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 20%, 98%);
+  --foreground: hsl(210, 25%, 7.8431%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 25%, 7.8431%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 25%, 7.8431%);
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 25%, 7.8431%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(210, 40%, 96%);
+  --muted-foreground: hsl(215.4, 16.3%, 46.9%);
+  --accent: hsl(142, 76%, 95%);
+  --accent-foreground: hsl(142, 76%, 36%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(214.3, 31.8%, 91.4%);
+  --input: hsl(214.3, 31.8%, 91.4%);
+  --ring: hsl(142, 76%, 36%);
+  --ag-green-50: hsl(138, 76%, 97%);
+  --ag-green-100: hsl(141, 84%, 93%);
+  --ag-green-500: hsl(142, 76%, 36%);
+  --ag-green-600: hsl(142, 72%, 29%);
+  --ag-green-700: hsl(142, 83%, 24%);
+  --chart-1: hsl(142, 76%, 36%);
+  --chart-2: hsl(43, 74%, 66%);
+  --chart-3: hsl(197, 37%, 24%);
+  --chart-4: hsl(27, 87%, 67%);
+  --chart-5: hsl(12, 76%, 61%);
+  --font-sans: 'Inter', sans-serif;
+  --radius: 0.75rem;
+}
+
+.dark {
+  --background: hsl(210, 25%, 7.8431%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(210, 25%, 10%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(210, 25%, 7.8431%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(142, 76%, 36%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 25%, 27%);
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(215, 25%, 16%);
+  --muted-foreground: hsl(217.9, 10.6%, 64.9%);
+  --accent: hsl(215, 25%, 16%);
+  --accent-foreground: hsl(142, 76%, 36%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(215, 25%, 16%);
+  --input: hsl(215, 25%, 16%);
+  --ring: hsl(142, 76%, 36%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .ag-green-50 {
+    background-color: hsl(var(--ag-green-50));
+  }
+  
+  .ag-green-100 {
+    background-color: hsl(var(--ag-green-100));
+  }
+  
+  .ag-green-500 {
+    background-color: hsl(var(--ag-green-500));
+  }
+  
+  .ag-green-600 {
+    color: hsl(var(--ag-green-600));
+  }
+  
+  .ag-green-700 {
+    color: hsl(var(--ag-green-700));
+  }
+  
+  .text-ag-green-500 {
+    color: hsl(var(--ag-green-500));
+  }
+  
+  .text-ag-green-600 {
+    color: hsl(var(--ag-green-600));
+  }
+  
+  .text-ag-green-700 {
+    color: hsl(var(--ag-green-700));
+  }
+  
+  .bg-ag-green-50 {
+    background-color: hsl(var(--ag-green-50));
+  }
+  
+  .bg-ag-green-100 {
+    background-color: hsl(var(--ag-green-100));
+  }
+  
+  .bg-ag-green-500 {
+    background-color: hsl(var(--ag-green-500));
+  }
+  
+  .from-ag-green-50 {
+    --tw-gradient-from: hsl(var(--ag-green-50));
+  }
+  
+  .from-ag-green-100 {
+    --tw-gradient-from: hsl(var(--ag-green-100));
+  }
+  
+  .from-ag-green-500 {
+    --tw-gradient-from: hsl(var(--ag-green-500));
+  }
+  
+  .to-ag-green-100 {
+    --tw-gradient-to: hsl(var(--ag-green-100));
+  }
+  
+  .to-ag-green-500 {
+    --tw-gradient-to: hsl(var(--ag-green-500));
+  }
+  
+  .border-ag-green-200 {
+    border-color: hsl(141, 84%, 85%);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+}
